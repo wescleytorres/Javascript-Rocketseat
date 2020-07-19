@@ -1,2 +1,3 @@
-# JS
- aprendizado pela Rocketseat
+# JS-Primeiros passos
+
+ aprendendo pela Rocketseat

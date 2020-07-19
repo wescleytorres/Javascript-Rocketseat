@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript</title>
+    </head>
+    <body>
+        <script>
+            // VARIAVEIS E DADOS
+            var nome = 'Jean'
+                idade = 25
+                peso = 62.5
+                humano = true
+
+            var alunos = ['Diego', 'Paulo', 'Gabriel']
+
+            var aluno = {
+                nome: 'Jean',
+                idade: 25,
+                peso: 62.5,
+                humano: true
+            }
+
+            // OPERAÇÕES NUMERICAS
+            var x = 10, y = 5
+                x = x + 5
+                resultado = x * y
+
+            // FUNÇÕES
+            function soma(valor1, valor2) {
+                var calculo = valor1 + valor2
+                
+                return calculo
+            }
+
+            
+            var resultado = soma(4,6)
+
+            // CONDICIONAIS (IF / SWITH)
+            function retornasexo(sexo) {
+                // USANDO IF
+                /*if (sexo === 'M') {
+                    return 'Masculino'
+                } else if (sexo === 'F') {
+                    return 'Feminino'
+                } else {
+                    return 'Outros'
+                }*/
+
+                // USANDO SWITH
+                /*switch (sexo) {
+                    case 'M':
+                        return 'Masculino'
+                    case 'F':
+                        return 'Feminino'
+                    default:
+                        return 'Outros'
+                }*/
+            }
+
+
+            var resultado = retornasexo('M')
+
+            // OPERADORES LOGICOS
+            var sexo = 'M'
+                idade = 25
+
+            // Usando AND (&&)
+            /*if (sexo === 'M' && idade >= 18) {
+                console.log('OK1')
+            }
+            // Usando OR (||)
+            if (sexo === 'F' || idade >= 18) {
+                console.log('OK2')
+            }
+            // Usando NOT diferente (!=)
+            if (sexo != 'M') {
+                console.log('OK3')
+            }*/
+
+            //CONDIÇÕES TERNARIAS
+            // substituir o IF
+            /*if (sexo === 'M') {
+                console.log('Masculino')
+            } else {
+                console.log('Feminino')
+            }*/
+            // var resultado = (sexo === 'M') ? 'Masculino' : 'Feminino'
+
+            // ESTRUTURA DE REPETIÇÃO FOR, WHILE (LOOP's)
+            /*for (var i = 1; i <= 10; i++) {
+                console.log(i)
+            }*/
+
+            /*var j = 23568
+            while (j > 20) {
+                console.log(j)
+
+                j /= 2
+            }*/
+
+            //INTERVALO E TIMEOUT
+            function Exibe_Algo() {
+                console.log('Hello Word!!!')
+            }
+
+            // setTimeout(Exibe_Algo, 2000)
+
+        </script>
+    </body>
+</html>
