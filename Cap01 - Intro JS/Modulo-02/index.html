@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Modulo 02</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="box"></div>
+        </div>
+        
+        <script>
+            var boxElement = document.querySelector('.box')
+
+            boxElement.style.width = 100
+            boxElement.style.height = 100
+            boxElement.style.backgroundColor = '#f00';
+            
+            // posso chamar uma função usando o button
+            //<button onclick='Mostra_Alerta()'>Botao</button>
+            /*function Mostra_Alerta() {
+                alert('Botão pressionado')
+            }*/
+
+            // var inputElement = document.querySelector('input[name=nome]')
+            // document.getElementById = vai te retornar o elemento pelo ID
+            // document.getElementByTagNome = retorna um vetor exemp(<input>). se desejar apenas 1 input , informar (vetor)[qual valor]
+            // document.getElementByClassName = retorna o vetor pela classe dele
+            // document.querySelector = pode buscar exatamente o vetor . exp(querySelector('div#app input') ou ('input[name=nome]')) . recomendado para um vetor especifico , ja para buscar todos = querySelectorAll('')
+            
+            // clicando e chamando uma funcao diretamente do script
+            // PELO HTML: <input type="text" name="nome" id="nome" />
+            // <button class="botao">Adicionar</button>
+            // var btnElement = document.querySelector('button[class=botao]')
+            // btnElement.onclick = function() {
+                /* o texto digitado para aparecer no alerta
+                var text = inputElement.value
+                alert(text)            
+            }*/
+
+            // É POSSIVEL INSERIR UM ACESSO AO EMAIL DIRETO PELO JS
+            // PELO HTML FICA: <a href="http://rocketseat.com.br">Acessar site da rockeatseat</a>
+            /*var linkElement = document.createElement('a')
+            linkElement.setAttribute('href', 'htpp//rocketseat.com.br')
+
+            var textElement = document.createTextNode('Acessar site da Rocketseat')
+            linkElement.appendChild(textElement)
+
+            var containerElement = document.querySelector('#app')
+            containerElement.appendChild(linkElement)*/
+        
+            
+
+
+
+        </script>
+    </body>
+</html>

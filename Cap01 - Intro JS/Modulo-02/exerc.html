@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercicio Modulo 02</title>
+    </head>
+    <body>
+        <div id="app">
+        <p>Exercicio 01: Quadrado Vermelho Ao pressionar o Botão</p>
+            <button onclick="Quadro_Red()">Botao Red</button>
+        <p>Exercicio 02: Mudar de cor ao passar o Mouse</p>
+            <div class="box"></div>
+        <p>Exercicio 03: Criar uma lista ul com JS</p>
+        <ul id='lista'></ul>
+        <p>Exercicio 04: Adicionar item a lista por input</p>
+        <input type="text" name="nome">
+        <button id="botao" onClick="adicionar()">Adicionar</button>
+        <ul id='lista2'></ul>
+        </div>
+        
+        <script>
+            // Exercicio 01        
+            var boxElement = document.querySelector('.box')
+
+            function Quadro_Red() {               
+                
+                boxElement.style.width = 100
+                boxElement.style.height = 100
+                boxElement.style.backgroundColor = "#f00"
+                
+            }
+            
+
+            // Exercicio 02
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+                } 
+            
+            boxElement.onmouseover = function() {
+                boxElement.style.backgroundColor = getRandomColor()
+            }
+
+            //Exercicio 03
+
+            /*A partir do seguinte vetor:
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+            ● Diego
+            ● Gabriel
+            ● Lucas*/
+            var nomes = ["Diego", "Gabriel", "Lucas"]
+               
+            listElement = document.getElementById('lista').innerHTML
+            let iterable = nomes
+            for (let value of iterable) {
+                listElement = listElement + "<li>"+value+"</li>"                
+                }
+            document.getElementById("lista").innerHTML = listElement
+
+            // Exercicio 04
+
+            btnElement = document.getElementById('botao')
+            btnElement.onclick = function() {
+                var txt = document.querySelector('input')
+                    msg = txt.value
+                
+                var inputElement = document.getElementById('lista2').innerHTML
+                    inputElement = inputElement + "<li>"+msg+"</li>"
+                document.getElementById('lista2').innerHTML = inputElement                
+
+            }
+
+        </script>
+    </body>
+</html>
