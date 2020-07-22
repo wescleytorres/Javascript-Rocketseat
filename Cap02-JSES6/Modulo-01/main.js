@@ -86,3 +86,10 @@ const filter = arr.filter(function(item) {
 })
 
 console.log(filter)
+
+//o FIND vai verificar dentro do vetor se contem o elemento solicitado (como um IF),  e retorna o resultado
+const find = arr.find(function(item) {
+    return item === 4
+})
+
+console.log(find)
