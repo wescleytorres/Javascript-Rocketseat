@@ -16,9 +16,52 @@
 // console.log(sub(4, 2))
 
 //EXERCICIO 01
-import ClasseUsuario, {idade as IdadeUsuario} from './functions'
+// import ClasseUsuario, {idade as IdadeUsuario} from './functions'
 
 
-ClasseUsuario.info()
+// ClasseUsuario.info()
 
-console.log(IdadeUsuario)
+// console.log(IdadeUsuario)
+
+//MODULO 03
+const minhaPromise = () => new Promise((resolve, reject) => {
+    setTimeout (() => { resolve('OK')}, 2000)
+})
+
+// minhaPromise().then(response => ...)
+
+//o ASYNC substitui o .then/.cath
+// async function executaPromise() {
+//     // outra função so sera executada depois q a acima terminar devido o AWAIT 
+//     console.log( await minhaPromise())
+//     console.log( await minhaPromise())
+//     console.log( await minhaPromise())
+//     // nao se usa AWAIT na frente de uma PROMISE, se nao estiver dentro de uma ASYNC
+// }
+
+//Pode usar ASYNC e AWAIT combinando com arrow functions
+// const executaPromise = async () => {
+//     console.log( await minhaPromise())
+//     console.log( await minhaPromise())
+//     console.log( await minhaPromise())
+// }
+
+// executaPromise()
+
+import axios from 'axios'
+
+class Api {
+    static async getUserInfo(username) {
+        // o TRY deve ser usado para se der erro, o CATCH respondera
+        try {
+            const response = await axios.get(`https://api.github.com/users/${username}`)
+            
+            console.log(response)
+        } catch (err) {
+            console.warn('Erro na API')
+        }
+        
+    }
+}
+
+Api.getUserInfo('wescleytorres')
